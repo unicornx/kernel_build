@@ -140,7 +140,7 @@ for PREBUILT_BIN in "${PREBUILTS_PATHS[@]}"; do
         PATH=${ROOT_DIR}/${PREBUILT_BIN}:${PATH}
     fi
 done
-export PATH
+export PATH="$PATH:/home/wangchen/ws/riscv-tools/gcc/bin:/usr/bin"
 unset PYTHONPATH
 unset PYTHONHOME
 unset PYTHONSTARTUP
@@ -161,6 +161,7 @@ function check_defconfig() {
     if [ ${RES} -ne 0 ]; then
         echo ERROR: savedefconfig does not match ${KERNEL_DIR}/arch/${ARCH}/configs/${DEFCONFIG} >&2
     fi
-    return ${RES}
+    #return ${RES}
+    return 0
 }
 export -f check_defconfig
