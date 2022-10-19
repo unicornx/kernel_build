@@ -140,7 +140,7 @@ for PREBUILT_BIN in "${PREBUILTS_PATHS[@]}"; do
         PATH=${ROOT_DIR}/${PREBUILT_BIN}:${PATH}
     fi
 done
-export PATH="$PATH:/home/wangchen/ws/riscv-tools/gcc/bin:/usr/bin"
+export PATH
 unset PYTHONPATH
 unset PYTHONHOME
 unset PYTHONSTARTUP
